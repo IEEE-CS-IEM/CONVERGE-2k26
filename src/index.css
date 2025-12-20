@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Formula1';
+  src: url('./assets/fonts/Formula1-Regular_web_0.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Formula1';
+  src: url('./assets/fonts/Formula1-Bold_web.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Formula1';
+  src: url('./assets/fonts/Formula1-Bold_web.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@layer base {
+  :root {
+    --background: 220 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 10% 90%;
+    --secondary-foreground: 220 20% 8%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 0 84% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 38 92% 50%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 38 92% 50%;
+
+    /* Custom colors */
+    --racing-amber: 38 92% 50%;
+    --racing-red: 0 84% 50%;
+    --racing-dark: 220 20% 8%;
+    --racing-gray: 220 10% 90%;
+    --gold: 50 80% 50%;
+    --silver: 0 0% 70%;
+    --copper: 25 60% 40%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 8% / 0.9), hsl(220 20% 8% / 0.7));
+    --gradient-card: linear-gradient(180deg, hsl(220 15% 15%), hsl(220 15% 10%));
+    --gradient-amber: linear-gradient(135deg, hsl(38 92% 50%), hsl(25 95% 45%));
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .racing-glow {
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.3);
+  }
+
+  .nav-pill {
+    @apply bg-foreground/95 backdrop-blur-md rounded-full px-8 py-3 flex items-center gap-6;
+  }
+
+  .social-bar {
+    @apply bg-secondary/90 backdrop-blur-sm rounded-full py-6 px-3 flex flex-col items-center gap-4;
+  }
+
+  .cta-button {
+    @apply bg-secondary text-secondary-foreground font-medium px-6 py-3 rounded-full flex items-center gap-3 transition-all duration-300 hover:bg-secondary/90;
+  }
+
+  .cta-button-outline {
+    @apply border border-foreground/30 text-foreground font-medium px-6 py-3 rounded-full flex items-center gap-3 transition-all duration-300 hover:bg-foreground/10;
+  }
+
+  .event-card {
+    @apply bg-card rounded-2xl p-6 border border-border/30;
+  }
+
+  .timeline-dot {
+    @apply w-4 h-4 rounded-full;
+  }
+
+  .timeline-dot-amber {
+    @apply bg-primary;
+  }
+
+  .timeline-dot-red {
+    @apply bg-accent;
+  }
+
+  .timeline-dot-white {
+    @apply bg-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Swiper custom styles */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-pagination {
+    bottom: 30px !important;
+  }
+
+  .swiper-pagination-bullet {
+    background: hsl(var(--primary)) !important;
+    opacity: 0.5 !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    width: 30px !important;
+    border-radius: 5px !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: hsl(var(--primary)) !important;
+    background: hsl(var(--background) / 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 20px !important;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: hsl(var(--primary)) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  .swiper-button-next {
+    right: 30px !important;
+  }
+
+  .swiper-button-prev {
+    left: 30px !important;
+  }
+}
+
+.outer-border {
+  position: relative;
+}
+
+.outer-border::before {
+  content: "";
+  position: absolute;
+
+  /* push outward */
+  inset: -12px;
+
+  background: black;
+  /* border color */
+  border-bottom-left-radius: 2.5rem;
+
+  z-index: -1;
+}
