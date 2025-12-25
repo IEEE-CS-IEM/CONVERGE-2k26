@@ -89,7 +89,18 @@ const TeamSelection = () => {
   const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
 
   return (
-    <section id="team" className="bg-white py-20">
+    <motion.section
+      id="team"
+      initial={{ backgroundColor: "#000000" }}
+      whileInView={{ backgroundColor: "#ffffff" }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        delay: 0.5,
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="py-20"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -184,7 +195,7 @@ const TeamSelection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
