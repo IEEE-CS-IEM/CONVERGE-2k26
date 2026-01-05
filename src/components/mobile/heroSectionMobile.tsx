@@ -10,6 +10,7 @@ import redBullDriver from "../../assets/drivers/redbull-driver.webp";
 import ferrariDriver from "../../assets/drivers/ferrari-driver.jpeg";
 import mercedesDriver from "../../assets/drivers/mercedes-driver.jpeg";
 import mclarenDriver from "../../assets/drivers/mclaren-driver.jpg";
+import { Instagram, Facebook, Twitter } from "lucide-react";
 
 const HeroSectionMobile = ({
   onTransition,
@@ -198,14 +199,26 @@ const HeroSectionMobile = ({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
           className="flex flex-grow bg-gray-200 
-                rounded-[2rem] 
-                w-[40%] p-4"
-        ></motion.div>
+                rounded-[2rem] items-center justify-between 
+                w-[40%] px-8"
+        >
+          <Instagram className="w-6 h-6 text-pink-600" />
+          <Facebook className="w-6 h-6 text-blue-500" />
+        </motion.div>
       </div>
       <div
-        className="flex flex-grow w-full bg-yellow-500
+        className="flex flex-col p-5 w-full bg-yellow-500
             rounded-[2rem]"
-      ></div>
+        onClick={() => onTransition("events")}
+      >
+        <h1 className="text-[1rem] font-formula1 font-bold text-black">
+          Checkout the events
+        </h1>
+
+        <h3 className="text-[0.65rem] font-formula1 text-black">
+          Take a look at what to expect from CONVERGE 2026
+        </h3>
+      </div>
     </div>
   );
 };
