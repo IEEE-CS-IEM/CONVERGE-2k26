@@ -144,7 +144,7 @@ export default function TimelineSection() {
               <div className={`
                 group relative 
                 border border-white/10 bg-card/40 backdrop-blur-md
-                /* HOVER STATES: Scale up, add red border glow, lift slightly */
+                /* HOVER STATES: Scale up, add red glow, lift slightly */
                 hover:bg-card/80 hover:border-f1-red/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.3)] 
                 hover:-translate-y-1 hover:scale-[1.01]
                 transition-all duration-300 ease-out

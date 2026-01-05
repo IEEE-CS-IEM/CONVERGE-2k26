@@ -103,7 +103,7 @@ const HeroSectionMobile = ({
 
               {/* Converge 2026 */}
               <motion.div
-                className="text-[clamp(1.8rem,10vw,2.8rem)] px-2"
+                className="text-[clamp(1.8rem,10vw,2.8rem)] px-1"
                 variants={{
                   hidden: { x: -80, opacity: 0 },
                   show: { x: 0, opacity: 1 },
