@@ -3,9 +3,17 @@ import { motion } from "framer-motion";
 
 const SocialBar = () => {
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/ieeecsiem_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      label: "Instagram",
+    },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/share/1FZXy35wMx/",
+      label: "Facebook",
+    },
   ];
 
   return (
@@ -15,8 +23,10 @@ const SocialBar = () => {
       transition={{ duration: 0.6, delay: 0.3 }}
       className="h-full w-full"
     >
-      <div className="py-8 social-bar bg-black
-      flex-col items-center justify-between w-full h-full">
+      <div
+        className="py-8 social-bar bg-black
+      flex-col items-center justify-between w-full h-full"
+      >
         {socialLinks.map((social, index) => (
           <motion.a
             key={social.label}

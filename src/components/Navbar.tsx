@@ -20,7 +20,7 @@ const Navbar = ({ activeSection = "home", onNavigate }: NavbarProps) => {
     { id: "events", icon: Calendar, label: "Events" },
     { id: "timeline", icon: TicketIcon, label: "Schedule" },
     { id: "team", icon: User, label: "Team" },
-    { id: "sponsors", icon: Phone, label: "Contact" },
+    { id: "contact", icon: Phone, label: "Contact" },
   ];
 
   const sectionBgColors = {

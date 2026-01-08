@@ -73,14 +73,16 @@ const HeroSectionMobile = ({
         >
           {/* content div */}
           <motion.div
-            className="absolute flex flex-col left-[10%] top-[20%] w-[80%] rounded-[2rem]
-                    font-bold font-formula1 h-[50%]"
+            className="absolute flex flex-col 
+            left-[10%] top-[20%] w-[80%] rounded-[2rem]
+            font-bold font-formula1 h-[45%]"
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
             <motion.div
-              className="flex flex-col flex-[4] justify-center"
+              className="flex flex-col flex-[4] 
+              justify-center mb-2"
               initial="hidden"
               animate="show"
               variants={{
@@ -92,7 +94,7 @@ const HeroSectionMobile = ({
             >
               {/* Get ready for */}
               <motion.div
-                className="text-[clamp(0.6rem,2.5vw,0.8rem)] px-4"
+                className="text-[clamp(0.6rem,2.5vw,0.8rem)] px-1"
                 variants={{
                   hidden: { x: -40, opacity: 0 },
                   show: { x: 0, opacity: 1 },
@@ -116,7 +118,7 @@ const HeroSectionMobile = ({
 
               {/* Flagship event */}
               <motion.div
-                className="text-[clamp(0.6rem,2.5vw,0.8rem)] px-4"
+                className="text-[clamp(0.6rem,2.5vw,0.8rem)] px-1"
                 variants={{
                   hidden: { x: -40, opacity: 0 },
                   show: { x: 0, opacity: 1 },
@@ -129,8 +131,9 @@ const HeroSectionMobile = ({
 
             {/* Content */}
             <motion.div
-              className="flex-[3] text-[clamp(0.6rem,2.5vw,0.85rem)] p-2 mb-4
-  font-extralight rounded-[2rem]"
+              className="flex-[3] 
+              text-[clamp(0.6rem,2.5vw,0.85rem)] p-2 mb-2
+              font-extralight rounded-[2rem]"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
@@ -143,14 +146,15 @@ const HeroSectionMobile = ({
 
             {/* CTA section */}
             <motion.div
-              className="rounded-b-[2rem] flex-[3] py-2 flex items-center justify-center"
+              className="rounded-b-[2rem] flex-[3] py-2 
+              flex items-center justify-center"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.7, ease: "easeOut" }}
             >
               <div
                 className="w-full
-                        max-h-[70%] grid grid-cols-2 gap-4"
+                max-h-[70%] grid grid-cols-2 gap-4"
               >
                 <motion.button
                   whileHover={{ scale: 1.08 }}
@@ -202,8 +206,24 @@ const HeroSectionMobile = ({
                 rounded-[2rem] items-center justify-between 
                 w-[40%] px-8"
         >
-          <Instagram className="w-6 h-6 text-pink-600" />
-          <Facebook className="w-6 h-6 text-blue-500" />
+          <Instagram
+            className="w-6 h-6 text-pink-600"
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/ieeecsiem_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                "noopener noreferrer"
+              )
+            }
+          />
+          <Facebook
+            className="w-6 h-6 text-blue-500"
+            onClick={() =>
+              window.open(
+                "https://www.facebook.com/share/1FZXy35wMx/",
+                "noopener noreferrer"
+              )
+            }
+          />
         </motion.div>
       </div>
       <div
