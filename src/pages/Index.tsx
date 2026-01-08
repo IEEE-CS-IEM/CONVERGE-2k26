@@ -7,6 +7,7 @@ import TimelineSection from "@/components/TimelineSection";
 import TeamSelection from "@/components/TeamSelection";
 import SponsorshipSection from "@/components/SponsorshipSection";
 import PartnersSection from "@/components/PartnersSection";
+import Footer from "@/components/Footer";
 import VideoLoader from "@/components/VideoLoader";
 import HeroSectionDesktop from "@/components/desktop/HeroSectionDesktop";
 import HeroSectionMobile from "@/components/mobile/heroSectionMobile";
@@ -131,6 +132,8 @@ const Index = () => {
       <section id="team" className="h-auto">
         <TeamSelection />
       </section>
+
+      <Footer />
     </main>
   );
 };
