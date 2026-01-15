@@ -71,18 +71,19 @@ const CrestSelectionDesktop = () => {
 
 
 
-  return(
+  return (
     <div className="w-[100vw] h-[100vh] bg-gradient-to-l from-[#6b0100] to-[#000000] flex items-center justify-center">
       <div className="flex flex-col w-[70%] h-[80%] rounded-[2rem]">
-        
+
         <div className="w-full flex items-center justify-center p-4 mb-4">
-          <motion.h1 
-          className="text-[1.5rem] font-formula1 font-bold text-white"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ 
-            delay:0.5,
-            duration: 0.5 }}
+          <motion.h1
+            className="text-[1.5rem] font-formula1 font-bold text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5
+            }}
           >
 
             Select your crest
@@ -91,63 +92,68 @@ const CrestSelectionDesktop = () => {
 
         <div className="w-full flex flex-grow items-center justify-center
         rounded-[2rem] p-6">
-            <div className="w-full h-full grid grid-cols-2 gap-6">
-              
-              {crestDetails.map((team) => (
-                <motion.div
-                  key={team.id}
-                  className={`relative flex items-center justify-center 
+          <div className="w-full h-full grid grid-cols-2 gap-6">
+
+            {crestDetails.map((team) => (
+              <motion.div
+                key={team.id}
+                className={`relative flex items-center justify-center 
                             w-full h-full rounded-[2rem] 
                             ${team.bgClass} cursor-pointer`}
-                  whileHover={{ 
-                    scale: 1.05,
-                    transition: { duration: 0.2, delay: 0 }
-                  }}
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{
-                    scaleX: { delay: team.delayScale, duration: 0.4 }
-                  }}
-                  style={{ transformOrigin: "right center" }}
-                  onClick={() => manageCrest(team.id)}
-                >
-                  <div className="flex items-center justify-center 
+                whileHover={{
+                  scale: 1.05,
+                  zIndex: 50,
+                  transition: {
+                    duration: 0.2,
+                    delay: 0,
+                    zIndex: { duration: 0 }
+                  }
+                }}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{
+                  scaleX: { delay: team.delayScale, duration: 0.4 }
+                }}
+                style={{ transformOrigin: "right center" }}
+                onClick={() => manageCrest(team.id)}
+              >
+                <div className="flex items-center justify-center 
                   w-[90%] h-[90%] overflow-hidden"
                   style={{
                     backgroundImage: `url(${team.crest})`,
                     backgroundSize: "contain",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                  }}> 
-                  </div>
+                  }}>
+                </div>
 
-                  <motion.div
-                    className="absolute w-full bottom-[-7rem] z-50"
-                    initial={{ x: "50%", opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{
-                      delay: team.delayCar,
-                      duration: 0.5,
-                      type: "spring",
-                      stiffness: 120,
-                      damping: 18,
-                    }}
-                  >
-                    <img
-                      src={team.car}
-                      className="object-contain"
-                      alt={team.carAlt}
-                    />
-                  </motion.div>
+                <motion.div
+                  className="absolute w-full bottom-[-7rem] z-50"
+                  initial={{ x: "50%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    delay: team.delayCar,
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 18,
+                  }}
+                >
+                  <img
+                    src={team.car}
+                    className="object-contain"
+                    alt={team.carAlt}
+                  />
                 </motion.div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
     </div>
   );
-  
+
 };
 
 export default CrestSelectionDesktop;

@@ -11,6 +11,8 @@ import Footer from "@/components/Footer";
 import VideoLoader from "@/components/VideoLoader";
 import HeroSectionDesktop from "@/components/desktop/HeroSectionDesktop";
 import HeroSectionMobile from "@/components/mobile/heroSectionMobile";
+import GallerySection from "@/components/GallerySection";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
@@ -132,6 +134,9 @@ const Index = () => {
       <section id="team" className="h-auto">
         <TeamSelection />
       </section>
+
+      <GallerySection />
+
 
       <Footer />
     </main>
