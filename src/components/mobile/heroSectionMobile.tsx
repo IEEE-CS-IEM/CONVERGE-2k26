@@ -11,8 +11,9 @@ import ferrariDriver from "../../assets/drivers/ferrari-driver.jpeg";
 import mercedesDriver from "../../assets/drivers/mercedes-driver.jpeg";
 import mclarenDriver from "../../assets/drivers/mclaren-driver.jpg";
 import { Instagram, Facebook, Twitter } from "lucide-react";
-import ieeecs from "../../assets/logos/ieeecs.svg";
-import iem from "../../assets/logos/iem.svg";
+
+import ieeecs from "../../assets/logo/ieeecs.png";
+import iem from "../../assets/logo/iem.png";
 import converge from "../../assets/logo/CONVERGE.png";
 
 const HeroSectionMobile = ({
