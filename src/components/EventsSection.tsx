@@ -14,7 +14,13 @@ const events = {
       category: "technical",
       description:
         "Deep dive into advanced technical concepts and hands-on coding challenges.",
-      schedule: ["11:30AM (5th March) - Introduction", "11:45 (5th March) - Q&A", "12:00PM (5th March) - Submission Starts", "08:30 PM (6th March) - Submission Closes ", "04:30 PM (7th March) - Finals"],
+      schedule: [
+        "11:30AM (5th March) - Introduction",
+        "11:45 (5th March) - Q&A",
+        "12:00PM (5th March) - Submission Starts",
+        "08:30 PM (6th March) - Submission Closes ",
+        "04:30 PM (7th March) - Finals",
+      ],
     },
     {
       id: 2,
@@ -44,13 +50,11 @@ const events = {
       time: "11.00 AM - 02.00 PM",
       category: "fun",
       description: "Exciting games and entertainment for all participants.",
-      schedule: [
-        "11:00 - Games Begin",
-      ],
+      schedule: ["11:00 - Games Begin"],
     },
     {
       id: 2,
-      name: "Fun Event",
+      name: "Mindscape Mayhem",
       date: "08. 03 .26",
       time: "11.30 AM - 02.00 PM",
       category: "fun",
@@ -68,10 +72,7 @@ const events = {
       time: "10.00 AM",
       category: "fun",
       description: "Team challenges and competitive activities.",
-      schedule: [
-        "10:00 (28th Feb) - Prelims",
-        "03:00PM - 04:30PM - Finals",
-      ],
+      schedule: ["10:00 (28th Feb) - Prelims", "03:00PM - 04:30PM - Finals"],
     },
     {
       id: 4,
@@ -94,7 +95,11 @@ const events = {
       time: "03.00 PM - 04:30 PM",
       category: "workshops",
       description: "Hands-on learning experience with expert instructors.",
-      schedule: ["03:00PM - Introduction", "03:30PM - Hands-on", "04:25PM - Wrap-up"],
+      schedule: [
+        "03:00PM - Introduction",
+        "03:30PM - Hands-on",
+        "04:25PM - Wrap-up",
+      ],
     },
     {
       id: 2,
@@ -103,7 +108,11 @@ const events = {
       time: "03.00 PM - 04:30 PM",
       category: "workshops",
       description: "Hands-on learning experience with expert instructors.",
-      schedule: ["03:00PM - Introduction", "03:30PM - Hands-on", "04:25PM - Wrap-up"],
+      schedule: [
+        "03:00PM - Introduction",
+        "03:30PM - Hands-on",
+        "04:25PM - Wrap-up",
+      ],
     },
   ],
 };
@@ -193,7 +202,7 @@ const EventsSection = ({ onTransition }: EventsSectionProps) => {
 
           {/* Fun Events */}
           <div className="mb-12">
-            <h3 className="text-foreground/80 font-display text-lg mb-6">
+            <h3 className="text-accent font-display text-lg mb-6">
               Fun Events
             </h3>
             <div className="space-y-4">
@@ -205,9 +214,7 @@ const EventsSection = ({ onTransition }: EventsSectionProps) => {
 
           {/* Workshops */}
           <div>
-            <h3 className="text-foreground/80 font-display text-lg mb-6">
-              Workshops
-            </h3>
+            <h3 className="text-accent font-display text-lg mb-6">Workshops</h3>
             <div className="space-y-4">
               {events.workshops.map((event, index) => (
                 <EventCard key={event.id} event={event} index={index} />

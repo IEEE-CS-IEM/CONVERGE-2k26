@@ -1,4 +1,9 @@
-import { ArrowRight, ArrowDownRight, ArrowRightCircleIcon } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowDownRight,
+  ArrowRightCircleIcon,
+  Linkedin,
+} from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import Navbar from "../Navbar";
 import redbullPic from "../../assets/bgs/redbull-bg.jpg";
@@ -193,7 +198,13 @@ const HeroSectionMobile = ({
                   className="bg-gray-400 text-white 
                   font-formula1
                   text-[clamp(0.6rem,2.5vw,0.8rem)]
-                  px-2 py-3 rounded-[2rem]"
+                  px-2 py-2 rounded-[2rem]"
+                  onClick={() =>
+                    window.open(
+                      "https://forms.gle/8kE4TaDXj2fy2dKy6",
+                      "noopener noreferrer",
+                    )
+                  }
                 >
                   Register Now
                 </motion.button>
@@ -205,6 +216,7 @@ const HeroSectionMobile = ({
                             text-white font-formula1 
                             text-[clamp(0.6rem,2.5vw,0.8rem)] 
                             px-2 py-2 rounded-[2rem]"
+                  title="Coming soon..."
                 >
                   Brochure
                 </motion.button>
@@ -246,11 +258,11 @@ const HeroSectionMobile = ({
               )
             }
           />
-          <Facebook
+          <Linkedin
             className="w-6 h-6 text-blue-500"
             onClick={() =>
               window.open(
-                "https://www.facebook.com/share/1FZXy35wMx/",
+                "https://www.linkedin.com/company/ieee-computer-society-iem",
                 "noopener noreferrer",
               )
             }

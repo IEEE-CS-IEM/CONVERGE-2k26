@@ -8,7 +8,11 @@ const SocialBar = () => {
       href: "https://www.instagram.com/ieeecsiem_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       label: "Instagram",
     },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/ieee-computer-society-iem",
+      label: "LinkedIn",
+    },
     {
       icon: Facebook,
       href: "https://www.facebook.com/share/1FZXy35wMx/",

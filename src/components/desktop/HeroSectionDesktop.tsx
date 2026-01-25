@@ -171,6 +171,12 @@ const HeroSectionDesktop = ({
         bg-gray-400 text-white 
         px-6 py-4 rounded-full font-formula1
         hover:bg-red-600 transition-colors duration-300"
+                onClick={() =>
+                  window.open(
+                    "https://forms.gle/8kE4TaDXj2fy2dKy6",
+                    "noopener noreferrer",
+                  )
+                }
               >
                 Register
                 <span className="ml-4">
@@ -183,6 +189,7 @@ const HeroSectionDesktop = ({
         bg-transparent text-white 
         px-6 py-2 rounded-full border-2 border-white font-formula1
         hover:bg-blue-600 transition-colors duration-300"
+                title="Coming soon..."
               >
                 Download Brochure
                 <span className="ml-4">
@@ -212,7 +219,7 @@ const HeroSectionDesktop = ({
           >
             <div
               className="flex w-full items-center justify-between
-               bg-black px-8 py-4 gap-6
+               bg-black px-4 py-2 gap-6
                rounded-br-[2.5rem]"
             >
               {/* Logo 1 */}
@@ -220,7 +227,7 @@ const HeroSectionDesktop = ({
                 <img
                   src={iem}
                   alt="IEM Logo"
-                  className="h-12 md:h-14 object-contain"
+                  className="h-10 md:h-12 object-contain"
                 />
               </div>
 
@@ -231,7 +238,7 @@ const HeroSectionDesktop = ({
                 <img
                   src={converge}
                   alt="Converge Logo"
-                  className="h-12 md:h-14 object-contain"
+                  className="h-10 md:h-12 object-contain"
                 />
               </div>
 
@@ -242,7 +249,7 @@ const HeroSectionDesktop = ({
                 <img
                   src={ieeecs}
                   alt="IEEE CS Logo"
-                  className="h-12 md:h-14 object-contain"
+                  className="h-10 md:h-12 object-contain"
                 />
               </div>
             </div>

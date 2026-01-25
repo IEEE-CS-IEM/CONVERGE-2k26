@@ -140,10 +140,13 @@ const Footer = () => {
         <div className="flex flex-col xl:flex-row justify-between items-end mb-16 border-b border-zinc-900 pb-8 gap-8">
           {/* Brand */}
           <div className="relative group">
-            <h2 className="font-formula1 text-6xl md:text-7xl italic tracking-tighter bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-600 drop-shadow-2xl">
+            <h2 className="font-formula1 text-5xl md:text-7xl italic tracking-tighter bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-600 drop-shadow-2xl">
               CONVERGE<span className="text-racing-red">.</span>
             </h2>
-            <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-racing-red to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            <div
+              className="absolute -bottom-4 left-4 w-full h-1 bg-gradient-to-r from-racing-red 
+            to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+            />
             <p className="font-mono text-zinc-500 text-sm mt-2 tracking-[0.4em] uppercase">
               Official Technical Partner 2K26
             </p>
@@ -257,47 +260,29 @@ const Footer = () => {
 
             {/* Social Grid */}
             <div className="flex gap-4">
-              {[Facebook, Instagram, Linkedin, Mail].map((Icon, i) => (
+              {[
+                {
+                  href: "https://www.facebook.com/share/1FZXy35wMx/",
+                  icon: Facebook,
+                },
+                {
+                  href: "https://www.instagram.com/ieeecsiem_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                  icon: Instagram,
+                },
+                {
+                  href: "https://www.linkedin.com/company/ieee-computer-society-iem",
+                  icon: Linkedin,
+                },
+                { href: "#", icon: Mail },
+              ].map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.href}
                   className="flex-1 aspect-[4/3] bg-zinc-900/50 border border-white/5 rounded-lg flex items-center justify-center text-zinc-400 hover:text-white hover:bg-racing-red hover:border-racing-red hover:-translate-y-1 transition-all duration-300 shadow-lg group"
                 >
-                  <Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                  <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
               ))}
-            </div>
-          </div>
-
-          {/* --- MIDDLE: DYNAMIC LISTS (Span 5) --- */}
-          <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-formula1 text-sm text-racing-red mb-6 uppercase tracking-wider flex items-center gap-2">
-                <Activity className="w-4 h-4" /> Quick Pit
-              </h4>
-              <ul className="space-y-1">
-                {[
-                  "About",
-                  "Registration",
-                  "Timeline",
-                  "Tracks",
-                  "Sponsors",
-                  "FAQs",
-                ].map((link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase()}`}
-                      className="flex items-center justify-between p-2 rounded group hover:bg-white/5 transition-colors"
-                    >
-                      <span className="text-xs font-mono uppercase text-zinc-400 group-hover:text-white group-hover:pl-2 transition-all duration-300">
-                        {link}
-                      </span>
-                      <ArrowRight className="w-3 h-3 text-racing-red opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
 
@@ -339,6 +324,15 @@ const Footer = () => {
                     <Phone className="w-4 h-4 text-racing-red" />
                     <span className="text-sm font-mono text-white">
                       +91 9674167092
+                    </span>
+                  </a>
+                  <a
+                    href="tel:+911234567890"
+                    className="flex items-center gap-3 p-3 bg-zinc-900/50 border border-white/5 rounded-lg hover:bg-zinc-800 hover:border-racing-red/50 transition-all group-hover:translate-x-1"
+                  >
+                    <Phone className="w-4 h-4 text-racing-red" />
+                    <span className="text-sm font-mono text-white">
+                      +91 9831254802
                     </span>
                   </a>
                 </div>
