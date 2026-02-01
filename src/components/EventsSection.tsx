@@ -17,9 +17,9 @@ const events = {
       schedule: [
         "11:30AM (5th March) - Introduction",
         "11:45 (5th March) - Q&A",
-        "12:00PM (5th March) - Submission Starts",
+        "12:00PM (5th March) - Submission Starts ( Online )",
         "08:30 PM (6th March) - Submission Closes ",
-        "04:30 PM (7th March) - Finals",
+        "04:30 PM (7th March) - Finals ( Offline )",
       ],
     },
     {
@@ -30,7 +30,7 @@ const events = {
       category: "technical",
       description:
         "Explore cutting-edge technologies and industry best practices.",
-      schedule: ["08:00PM- Opening", "10:00 - Closing"],
+      schedule: ["08:00PM- Opening ( Online )", "10:00 - Closing"],
     },
     {
       id: 3,
@@ -60,7 +60,7 @@ const events = {
       category: "fun",
       description: "Team challenges and competitive activities.",
       schedule: [
-        "16:30 - Team Formation",
+        "16:30 - Team Formation ( 3 or 4 Members )",
         "17:00 - Challenges",
         "18:00 - Results",
       ],
@@ -68,11 +68,11 @@ const events = {
     {
       id: 3,
       name: "Converge Got Talent",
-      date: "28. 02 .26",
+      date: "08. 03 .26",
       time: "10.00 AM",
       category: "fun",
       description: "Team challenges and competitive activities.",
-      schedule: ["10:00 (28th Feb) - Prelims", "03:00PM - 04:30PM - Finals"],
+      schedule: ["10:00 (28th February) - Prelims", "03:00PM - 04:30PM (08th March) - Finals"],
     },
     {
       id: 4,
