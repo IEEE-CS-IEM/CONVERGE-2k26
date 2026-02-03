@@ -216,7 +216,12 @@ const HeroSectionMobile = ({
                             text-white font-formula1 
                             text-[clamp(0.6rem,2.5vw,0.8rem)] 
                             px-2 py-2 rounded-[2rem]"
-                  title="Coming soon..."
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1Lhwlxq--vIqKfXPpo8Yd_On-UApFldqi/view?usp=drivesdk",
+                      "noopener noreferrer",
+                    )
+                  }
                 >
                   Brochure
                 </motion.button>

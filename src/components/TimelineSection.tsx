@@ -28,30 +28,35 @@ const scheduleData: Record<string, Event[]> = {
     },
   ],
   Saturday: [
-    { time: "09:00", title: "Registration starts", category: "Offline" },
+    { time: "09:00", title: "Onboarding", category: "Offline" },
     {
       time: "10:00",
-      title: "Explanation of the days flow and Rules of Games Carnival",
+      title: "Explanation of the day's flow and Rules of The Games Carnival",
       category: "Offline",
     },
-    { time: "11.00", title: "Games Carnival", category: "Offline" },
+    { time: "11.00", title: "The Games Carnival", category: "Offline" },
     { time: "14:00", title: "LUNCH", category: "Offline" },
     {
       time: "15:00",
-      title: "Agentic AI Workshop, AI in Development Workshop",
+      title: "Hands on Agentic AI : Reason, plan, act",
       category: "Offline",
     },
-    { time: "16:30", title: "Ideasprint", category: "Offline" },
+    {
+      time: "15:00",
+      title: "Core and cortex : Backend and AI integration workshop",
+      category: "Offline",
+    },
+    { time: "16:30", title: "Ideasprint Finals", category: "Offline" },
     { time: "20:00", title: "CodeSprint", category: "Online" },
   ],
   Sunday: [
     {
       time: "10:00",
-      title: "Tech Talk/ Career Counselling",
+      title: "Tech Talk",
       category: "Offline",
     },
     {
-      time: "11:30",
+      time: "12:00",
       title: "Converge Creator Submission Closes",
       category: "Online",
     },
@@ -59,7 +64,11 @@ const scheduleData: Record<string, Event[]> = {
     { time: "14:00", title: "LUNCH", category: "Offline" },
     { time: "15:00", title: "Converge Got Talent Finals", category: "Offline" },
     { time: "16:30", title: "Valedictory Session", category: "Offline" },
-    { time: "17:00", title: "Grand Auction", category: "Offline" },
+    {
+      time: "17:00",
+      title: "Game of Bids: The Grand Auction",
+      category: "Offline",
+    },
   ],
 };
 

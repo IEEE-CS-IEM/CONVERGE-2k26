@@ -273,7 +273,7 @@ const Footer = () => {
                   href: "https://www.linkedin.com/company/ieee-computer-society-iem",
                   icon: Linkedin,
                 },
-                { href: "#", icon: Mail },
+                { href: "mailto:ieecsiem@gmail.com", icon: Mail },
               ].map((social, i) => (
                 <a
                   key={i}
@@ -303,12 +303,12 @@ const Footer = () => {
                     General Inquiries
                   </p>
                   <a
-                    href="mailto:converge@iem.edu"
+                    href="mailto:ieeecsiem@gmail.com"
                     className="flex items-center gap-3 p-3 bg-zinc-900/50 border border-white/5 rounded-lg hover:bg-zinc-800 hover:border-racing-red/50 transition-all group-hover:translate-x-1"
                   >
                     <Mail className="w-4 h-4 text-racing-red" />
                     <span className="text-sm font-mono text-white">
-                      converge@iem.edu.in
+                      ieeecsiem@gmail.com
                     </span>
                   </a>
                 </div>

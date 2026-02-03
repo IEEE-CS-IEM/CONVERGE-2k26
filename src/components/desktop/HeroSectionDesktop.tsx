@@ -189,7 +189,12 @@ const HeroSectionDesktop = ({
         bg-transparent text-white 
         px-6 py-2 rounded-full border-2 border-white font-formula1
         hover:bg-blue-600 transition-colors duration-300"
-                title="Coming soon..."
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1Lhwlxq--vIqKfXPpo8Yd_On-UApFldqi/view?usp=drivesdk",
+                    "_blank",
+                  )
+                }
               >
                 Download Brochure
                 <span className="ml-4">
