@@ -72,7 +72,10 @@ const events = {
       time: "10.00 AM",
       category: "fun",
       description: "Team challenges and competitive activities.",
-      schedule: ["10:00 (28th February) - Prelims", "03:00PM - 04:30PM (08th March) - Finals"],
+      schedule: [
+        "10:00 (28th February) - Prelims",
+        "03:00PM - 04:30PM (08th March) - Finals",
+      ],
     },
     {
       id: 4,
@@ -103,7 +106,7 @@ const events = {
     },
     {
       id: 2,
-      name: "AI in Development",
+      name: "Backend and AI Workshop",
       date: "07. 03 .26",
       time: "03.00 PM - 04:30 PM",
       category: "workshops",

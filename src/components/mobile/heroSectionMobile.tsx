@@ -174,7 +174,7 @@ const HeroSectionMobile = ({
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             >
-              IEEE CS, IEM has returned with yet another version of CONVERGE, a
+              IEEE CS, IEM has returned with yet another version of CONVERGE. a
               true technical extravaganza in all senses. This time, inspired by
               the legacy of FORMULA 1 Racing. Be a part of it and acquire an
               experience to cherish for your lifetime.

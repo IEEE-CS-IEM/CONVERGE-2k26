@@ -22,7 +22,6 @@ const galleryImages = [
   { id: 5, src: "/gallery/f1/img5.jpg", alt: "Archives 5" },
   { id: 6, src: "/gallery/f1/img6.jpg", alt: "Archives 6" },
   { id: 7, src: "/gallery/f1/img7.jpg", alt: "Archives 7" },
-  { id: 8, src: "/gallery/f1/img8.jpg", alt: "Archives 8" },
   { id: 9, src: "/gallery/f1/img9.jpg", alt: "Archives 9" },
   { id: 10, src: "/gallery/f1/img10.jpg", alt: "Archives 10" },
   { id: 11, src: "/gallery/f1/img11.jpg", alt: "Archives 11" },

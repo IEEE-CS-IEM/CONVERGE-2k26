@@ -150,7 +150,7 @@ const HeroSectionDesktop = ({
                 className="text-[1rem] leading-relaxed 
               font-formula1 text-white"
               >
-                IEEE CS, IEM has returned with yet another version of CONVERGE,
+                IEEE CS, IEM has returned with yet another version of CONVERGE.
                 A true technical extravaganza in all senses. This time, inspired
                 by the legacy of the FORMULA 1 Racing. Be a part of it and
                 acquire an experience to cherish for your lifetime
