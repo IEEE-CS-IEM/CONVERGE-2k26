@@ -2,6 +2,7 @@ import { useState } from "react";
 import { X, MessageSquare, Radio, Mic2, Activity } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import maxPixel from "@/assets/maxi.png"; // Ensure this asset exists, if not need to fallback or use a placeholder
+import botLogo from "/favicon.png";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const Chatbot = () => {
                 <div className="relative">
                   <div className="w-10 h-10 rounded bg-[#f33] p-0.5">
                     <img
-                      src={maxPixel}
+                      src={botLogo}
                       alt="Max"
                       className="w-full h-full object-cover rounded filter brightness-110"
                     />
@@ -146,18 +147,23 @@ const Chatbot = () => {
           // Max Head State
           <div className="relative w-24 h-24 flex items-end justify-center">
             {/* Circle Background pulse */}
-            <div className="absolute bottom-2 w-16 h-16 bg-[#f33]/20 rounded-full animate-ping" />
-            <div className="absolute bottom-2 w-16 h-16 bg-gradient-to-tr from-black to-[#222] rounded-full border border-[#f33] shadow-lg flex items-center justify-center overflow-hidden">
-              {/* Fallback Icon if image fails, but mostly just background for the image */}
-              <Mic2 className="w-6 h-6 text-[#f33]" />
-            </div>
-
-            {/* Character Image popping out */}
-            <img
-              src={maxPixel}
-              alt="Chat"
-              className="absolute bottom-0 w-full h-full object-contain filter drop-shadow-2xl hover:-translate-y-1 transition-transform duration-300"
+            <div
+              className="absolute bottom-2 w-16 h-16 bg-[#f33]/20 
+            rounded-full animate-ping"
             />
+            <div
+              className="absolute bottom-2 w-16 h-16 bg-gradient-to-tr
+            from-black to-[#222] rounded-full border border-[#f33] 
+            shadow-lg flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src={botLogo}
+                alt="Chat"
+                className="absolute bottom-0 w-fit h-full 
+              object-contain filter drop-shadow-2xl hover:-translate-y-1 
+              transition-transform duration-300"
+              />
+            </div>
 
             {/* Notification Badge */}
             <div className="absolute top-4 right-4 flex h-3 w-3">
